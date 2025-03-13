@@ -1,0 +1,45 @@
+/* 站长专属 */
+.printuser a[href*="http://www.wikidot.com/user:info/lanbaoshi1145"] {
+background: linear-gradient(90deg,#EE82EE 20%,#00D1FF 100%);  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 网站管理员 */
+.printuser a[href*="http://www.wikidot.com/user:info/aacer"],.printuser a[href*="http://www.wikidot.com/user:info/aizen-9"],.printuser a[href*="http://www.wikidot.com/user:info/charley-misaka"] {
+    background: linear-gradient(90deg,#F83600 0%,#F9D423 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 版主 */
+/* 哇这个不是我们蓝宝石1145的小号吗。 */
+.printuser a[href*="http://www.wikidot.com/user:info/506-edgar"] {
+    background: linear-gradient(90deg,#3F00FF 0%,#C426EC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 我重生了，这个世界不存在mast职员。 */
+
+/* 显卡大帝，我觉得这个不会有其他人了。 */
+.printuser a[href*="http://www.wikidot.com/user:info/rzx-story"] {
+background: linear-gradient(90deg,#c0c0c0 20%,#625b57 100%);  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 制裁缝隙云蛋。 */
+.thread-container .post .printuser a[href*="http://www.wikidot.com/user:info/wind-and-cloud"]:nth-of-type(2) { font-size: 0; }
+.thread-container .post .printuser a[href*="http://www.wikidot.com/user:info/wind-and-cloud"]:nth-of-type(2)::after {
+    content: "风系云蛋";
+    font-size: initial;
+}
+/* 小朋友们好啊我是has你们赶紧给我更新浏览器 */
+div.modal-body:has(a[href="http://www.wikidot.com/user:info/wind-and-cloud"]):has(a[href="http://www.wikidot.com/account/messages#/new/8145986"]) h1 {
+    font-size: 0;
+}
+div.modal-body:has(a[href="http://www.wikidot.com/user:info/wind-and-cloud"]):has(a[href="http://www.wikidot.com/account/messages#/new/8145986"]) h1::after {
+    content: "风系云蛋";
+    font-size: calc(var(--base-font-size)*2);
+}
