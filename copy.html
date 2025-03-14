@@ -14,7 +14,7 @@
         @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap");
         @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
         
-        .button-container {
+        。button-container {
             display: flex;
             box-shadow: inset 0 calc(0.125em* -1) 0 0 lightgray;
             height: 1.5rem;
@@ -23,39 +23,39 @@
             padding: 0;
         }
         
-        .button-container button {
-            font-family: Inter, "Noto Sans SC", "Noto Sans TC", Arimo, Verdana, Geneva, sans-serif !important;
+        。button-container button {
+            font-family: Inter， "Noto Sans SC"， "Noto Sans TC"， Arimo， Verdana， Geneva， sans-serif !important;
             cursor: pointer;
             color: #191410;
-            transition: background-color 80ms cubic-bezier(.4, 0, .2, 1);
+            transition: background-color 80ms cubic-bezier(.4， 0， .2， 1);
             font-weight: 400;
             font-size: 14px;
             width: 50%;
             border: none;
-            background-color: rgba(237, 233, 223, 0.5);
+            background-color: rgba(237， 233， 223， 0.5);
             padding-left: 14px;
             text-align: left;
             display: inline-flex;
         }
         
-        .button-container button:first-child {
+        。button-container button:first-child {
             border-right: 1px solid #ddd9d0;
         }
         
-        .button-container button:last-child {
+        。button-container button:last-child {
             border-left: 1px solid #ddd9d0;
         }
         
-        .button-container button:active, .button-container button:hover {
+        。button-container button:active, .button-container button:hover {
             color: #191410;
-            background-color: rgba(25, 20, 16, 0.15);
+            background-color: rgba(25， 20， 16， 0.15);
         }
-     .head p {
-        --text-shadow: rgb(25,20,16);
+     。head p {
+        --text-shadow: rgb(25，20，16);
         --wght: 700;
         display: block;
         height: 1.25rem;
-        color: rgb(237, 233, 223);
+        color: rgb(237， 233， 223);
         font-weight: 700;
         font-size: calc(0.9375rem* 0.9333333333* 0.9);
         line-height: 1.25rem;
@@ -66,11 +66,14 @@
         margin: 0;
     }
 body { margin:0; }
-        .head { background: var(--gradient-sidemenu-header); min-height: 1.25rem;  --swatch-primary-darker: 72,69,60; --gradient-sidemenu-header: linear-gradient(10deg, rgba(var(--swatch-primary-darker), 0.45) 0%, rgba(var(--swatch-primary-darker), 0.55) 100%); }
+        。head { background: var(--gradient-sidemenu-header); min-height: 1.25rem;  --swatch-primary-darker: 72，69，60; --gradient-sidemenu-header: linear-gradient(10deg， rgba(var(--swatch-primary-darker)， 0.45) 0%， rgba(var(--swatch-primary-darker)， 0.55) 100%); }
     </style>
 </head>
 <body>
     <div class="wrapper">
+        <div class="head">
+             <p>点击复制代码</p>
+        </div>
         <!-- 第一组按钮 -->
         <div class="button-container">
             <button id="button-1">折叠块</button>
@@ -138,37 +141,37 @@ body { margin:0; }
 
     <script>
         function execCopy(string) {
-            var temp = document.createElement('div');
-            temp.appendChild(document.createElement('pre')).textContent = string;
-            var s = temp.style;
-            s.position = 'fixed';
-            s.left = '-100%';
-            document.body.appendChild(temp);
-            document.getSelection().selectAllChildren(temp);
-            var result = document.execCommand('copy');
-            document.body.removeChild(temp);
+            var temp = document。createElement('div');
+            temp。appendChild(document。createElement('pre'))。textContent = string;
+            var s = temp。style;
+            s。position = 'fixed';
+            s。left = '-100%';
+            document。body。appendChild(temp);
+            document。getSelection()。selectAllChildren(temp);
+            var result = document。execCommand('copy');
+            document。body。removeChild(temp);
             return result;
         }
 
         // 第一组按钮事件
-        document.getElementById('button-1').onclick = function() {
+        document。getElementById('button-1')。onclick = function() {
             if (execCopy('[[collapsible show="+ 显示" hide="- 隐藏"]]\n内容\n[[/collapsible]]')) {} else {
                 alert('复制失败！');
             }
         };
-        document.getElementById('button-2').onclick = function() {
+        document。getElementById('button-2')。onclick = function() {
             if (execCopy('[[include :scp-wiki-cn:component:coltop show=+ 一层折叠|hide=- 隐藏文本]]\n内容\n[[include :scp-wiki-cn:component:colend]]')) {} else {
                 alert('复制失败！');
             }
         };
 
         // 第二组按钮事件
-        document.getElementById('button-3').onclick = function() {
+        document。getElementById('button-3')。onclick = function() {
             if (execCopy('[[include component:image-block\n|name=URL\n|caption=描述\n]]')) {} else {
                 alert('复制失败！');
             }
         };
-        document.getElementById('button-4').onclick = function() {
+        document。getElementById('button-4')。onclick = function() {
             if (execCopy('[[span class="ruby"]]下面的大字[[span class="rt"]]上面的小字[[/span]][[/span]]')) {} else {
                 alert('复制失败！');
             }
