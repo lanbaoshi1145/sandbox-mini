@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0,0,1&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap");
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+        
+        .button-container {
+            display: flex;
+            box-shadow: inset 0 calc(0.125em* -1) 0 0 lightgray;
+            height: 1.5rem;
+            min-height: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .button-container button {
+            font-family: Inter, "Noto Sans SC", "Noto Sans TC", Arimo, Verdana, Geneva, sans-serif !important;
+            cursor: pointer;
+            color: #191410;
+            transition: background-color 80ms cubic-bezier(.4, 0, .2, 1);
+            font-weight: 400;
+            font-size: 14px;
+            width: 50%;
+            border: none;
+            background-color: rgba(237, 233, 223, 0.5);
+            padding-left: 14px;
+            text-align: left;
+            display: inline-flex;
+        }
+        
+        .button-container button:first-child {
+            border-right: 1px solid #ddd9d0;
+        }
+        
+        .button-container button:last-child {
+            border-left: 1px solid #ddd9d0;
+        }
+        
+        .button-container button:active, .button-container button:hover {
+            color: #191410;
+            background-color: rgba(25, 20, 16, 0.15);
+        }
+     .head p {
+        --text-shadow: rgb(25,20,16);
+        --wght: 700;
+        display: block;
+        height: 1.25rem;
+        color: rgb(237, 233, 223);
+        font-weight: 700;
+        font-size: calc(0.9375rem* 0.9333333333* 0.9);
+        line-height: 1.25rem;
+        letter-spacing: 0.016em;
+        text-align: center;
+        text-shadow: 0.063rem 0.063rem 0.063rem var(--text-shadow);
+        text-transform: uppercase;
+        margin: 0;
+    }
+body { margin:0; }
+        .head { background: var(--gradient-sidemenu-header); min-height: 1.25rem;  --swatch-primary-darker: 72,69,60; --gradient-sidemenu-header: linear-gradient(10deg, rgba(var(--swatch-primary-darker), 0.45) 0%, rgba(var(--swatch-primary-darker), 0.55) 100%); }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 第一组按钮 -->
+        <div class="button-container">
+            <button id="button-1">折叠块</button>
+            <button id="button-2">多重折叠</button>
+        </div>
+        
+        <!-- 第二组按钮 -->
+        <div class="button-container">
+            <button id="button-3">插入图片</button>
+            <button id="button-4">上标文字</button>
+        </div>
+        
+        <!-- 第三组按钮 -->
+        <div class="button-container">
+            <button id="button-5">生存难度</button>
+            <button id="button-6">IETS组件</button>
+        </div>
+        
+        <!-- 第四组按钮 -->
+        <div class="button-container">
+            <button id="button-7">评分信息</button>
+            <button id="button-8">底部导航</button>
+        </div>
+        
+        <!-- 第五组按钮 -->
+        <div class="button-container">
+            <button id="button-9">分页</button>
+            <button id="button-10">引用块</button>
+        </div>
+        
+        <!-- 第六组按钮 -->
+        <div class="button-container">
+            <button id="button-11">亮色块</button>
+            <button id="button-12">暗色块</button>
+        </div>
+        
+        <!-- 第七组按钮 -->
+        <div class="button-container">
+            <button id="button-13">亮样式块</button>
+            <button id="button-14">暗样式块</button>
+        </div>
+
+        <div class="head">
+             <p>常用版式</p>
+        </div>
+
+        <!-- 第八组按钮 -->
+        <div class="button-container">
+            <button id="button-15">更好的空白</button>
+            <button id="button-16">飘渺愿景</button>
+        </div>
+        
+        <!-- 第九组按钮 -->
+        <div class="button-container">
+            <button id="button-17">新阈限</button>
+            <button id="button-18">超阈限</button>
+        </div>
+        
+        <!-- 第十组按钮 -->
+        <div class="button-container">
+            <button id="button-19">Sigma-9</button>
+            <button id="button-20">黑色标记笔</button>
+        </div>
+    </div>
+
+    <script>
+        function execCopy(string) {
+            var temp = document.createElement('div');
+            temp.appendChild(document.createElement('pre')).textContent = string;
+            var s = temp.style;
+            s.position = 'fixed';
+            s.left = '-100%';
+            document.body.appendChild(temp);
+            document.getSelection().selectAllChildren(temp);
+            var result = document.execCommand('copy');
+            document.body.removeChild(temp);
+            return result;
+        }
+
+        // 第一组按钮事件
+        document.getElementById('button-1').onclick = function() {
+            if (execCopy('[[collapsible show="+ 显示" hide="- 隐藏"]]\n内容\n[[/collapsible]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-2').onclick = function() {
+            if (execCopy('[[include :scp-wiki-cn:component:coltop show=+ 一层折叠|hide=- 隐藏文本]]\n内容\n[[include :scp-wiki-cn:component:colend]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+
+        // 第二组按钮事件
+        document.getElementById('button-3').onclick = function() {
+            if (execCopy('[[include component:image-block\n|name=URL\n|caption=描述\n]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-4').onclick = function() {
+            if (execCopy('[[span class="ruby"]]下面的大字[[span class="rt"]]上面的小字[[/span]][[/span]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+
+        // 第三组按钮事件
+        document.getElementById('button-5').onclick = function() {
+            if (execCopy('[[include :backrooms-wiki-cn:component:level-class\n|lang=cn\n|class=等级\n]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-6').onclick = function() {
+            if (execCopy('[[include :backrooms-wiki-cn:component:iets\n|lang=cn\n|danger=威胁（0~5）\n|intelligence=智能（A~E）\n]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+
+        // 第四组按钮事件
+        document.getElementById('button-7').onclick = function() {
+            if (execCopy('[[include :backrooms-wiki-cn:credit:start]]\n**Level C-XXX：**XXX\n**作者：**[[*user 作者]]\n**图像：**所用插图来源及许可\n更多你想告诉读者的东西\n\n可选：[[include :backrooms-wiki-cn:credit:more]]\n\n[[include :backrooms-wiki-cn:credit:end]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-8').onclick = function() {
+            if (execCopy('[[div class="footer-wikiwalk-nav"]]\n[[=]]\n<< [[[Level n-1]]] | Level n | [[[Level n+1]]] >>\n[[/=]]\n[[/div]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+
+        // 第五组按钮事件
+        document.getElementById('button-9').onclick = function() {
+            if (execCopy('[[tabview]]\n[[tab 分页1]]\n内容\n[[/tab]]\n[[tab 分页2]]\n内容\n[[/tab]]\n[[/tabview]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-10').onclick = function() {
+            if (execCopy('[[div class="blockquote"]]\n内容\n[[/div]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+
+        // 第六组按钮事件
+        document.getElementById('button-11').onclick = function() {
+            if (execCopy('[[div class="lightblock"]]\n内容\n[[/div]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-12').onclick = function() {
+            if (execCopy('[[div class="darkblock"]]\n内容\n[[/div]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+
+        // 第七组按钮事件
+        document.getElementById('button-13').onclick = function() {
+            if (execCopy('[[div class="styled-quote"]]\n内容\n[[/div]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-14').onclick = function() {
+            if (execCopy('[[div class="dark-styled-quote"]]\n内容\n[[/div]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+
+        // 第八组按钮事件
+        document.getElementById('button-15').onclick = function() {
+            if (execCopy('[[include :backrooms-wiki-cn:theme:better-blank]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-16').onclick = function() {
+            if (execCopy('[[include :backrooms-wiki-cn:theme:ethereality]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        
+        // 第九组按钮事件
+        document.getElementById('button-17').onclick = function() {
+            if (execCopy('[[include :backrooms-wiki-cn:theme:nuliminal]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-18').onclick = function() {
+            if (execCopy('[[include :backrooms-wiki-cn:theme:super-liminal]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        
+        // 第十组按钮事件
+        document.getElementById('button-19').onclick = function() {
+            if (execCopy('[[module ThemePreviewer noUi="true" theme_url="https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/cn/sigma9_ch.min.css "]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+        document.getElementById('button-20').onclick = function() {
+            if (execCopy('[[include :scp-wiki-cn:theme:black-highlighter-theme]]')) {} else {
+                alert('复制失败！');
+            }
+        };
+    </script>
+</body>
+</html>
